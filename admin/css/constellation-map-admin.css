@@ -2,3 +2,16 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+
+#constellation-map-contain {
+	margin: 15px 0;
+}
+
+#constellation-map-contain #constellation-map-admin-leaflet {
+	height: 450px;
+}
+
+.constellation-control{
+	/*border: 1px solid;*/
+	padding: 15px;
+}

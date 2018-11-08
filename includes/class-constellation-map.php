@@ -156,6 +156,9 @@ class Constellation_Map {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'init', $plugin_admin, 'register_post_type' );
+		$this->loader->add_action( 'edit_form_after_title', $plugin_admin, 'add_leaflet_container_to_post_edit_screen' );
+		$this->loader->add_action( 'save_post_'.$plugin_admin::POST_TYPE, $plugin_admin, 'save_post_meta' );
 
 	}
 
